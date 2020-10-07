@@ -1,0 +1,224 @@
+#include "system.h"
+#include "io.h"
+#include <stdint.h>
+#include "unistd.h"
+#include "sys/alt_stdio.h"
+
+#define Y_ADDR_START_I2CREG         0x3002
+#define X_ADDR_START_I2CREG         0x3004
+#define Y_ADDR_END_I2CREG           0x3006
+#define X_ADDR_END_I2CREG           0x3008
+#define RESET_REGISTER_I2CREG       0x301A
+#define COARSE_INTEGR_TIME_I2CREG   0x3012
+#define AE_CTRL_REG_I2CREG          0x3100
+#define AE_TARGET_I2CREG            0x3102
+#define AE_MINEX_I2CREG             0x311E
+#define AE_MAXEX_I2CREG             0x311C
+#define AE_MINSTEP_I2CREG           0x3108
+#define AE_MAXSTEP_I2CREG           0x310A
+#define AE_DAMPOFSET_I2CREG         0x310C
+#define AE_DAMPGAIN_I2CREG          0x310E
+#define AE_DAMPMAX_I2CREG           0x3110
+#define EMBEDDED_DATA_CTRL_I2CREG   0x3064
+#define PLL_MULTIPLIER_I2CREG       0x3030
+#define LINE_LENGHT_PCK_I2CREG      0x300C
+#define READ_MODE_I2CREG            0x3040
+#define DIG_BINNIGN_I2CREG          0x3032
+#define TEST_PATTERN_I2CREG         0x3070
+
+#define BULKSIZE    1280*960
+
+static uint8_t addr = 1;
+uint32_t cnt;
+
+struct regval_list {
+    alt_u16 reg_num;
+    alt_u16 value;
+};
+
+static struct regval_list mt9_reset[] = {
+    {RESET_REGISTER_I2CREG, 0x0001},    /* RESET */
+    {0xFFFF, 0xFFFF} /* END MARKER */
+};
+
+
+static struct regval_list mt9_initvals[] = {
+
+
+    {RESET_REGISTER_I2CREG, 0x1D84},    /* Mode control */
+
+    {X_ADDR_START_I2CREG, 2},           /* XSTART */
+    {X_ADDR_END_I2CREG, 1281},        /* XEND */
+    {Y_ADDR_START_I2CREG, 4},           /* YSTART */
+    {Y_ADDR_END_I2CREG, 963},           /* YEND */
+    {COARSE_INTEGR_TIME_I2CREG, 0x100},  /* Coarse integration time */
+    {LINE_LENGHT_PCK_I2CREG, 1650},     /* Line lenght */
+    {EMBEDDED_DATA_CTRL_I2CREG, 0x1802},/* Embedded diagnostic setup (disable) */
+    //{0x302A, 1},                      /* PLL */
+    //{0x302E, 4},                      /* PLL */
+    {PLL_MULTIPLIER_I2CREG, 44},        /* PLL_MULTIPLIER_I2CREG */
+    {TEST_PATTERN_I2CREG, 0},         /* Test pattern (0 normal, 256 pattern) */
+
+    {AE_TARGET_I2CREG, 0x0400},          /* AE target */
+    {AE_MINEX_I2CREG, 0x0001},                /* min AE exposure value */
+    {AE_MAXEX_I2CREG, 0x0500},                /* max AE exposure value */
+    {AE_MINSTEP_I2CREG, 0x0010},              /* min AE step value */
+    {AE_MAXSTEP_I2CREG, 0x0050},              /* max AE step value */
+    {AE_DAMPOFSET_I2CREG, 0x0200},            /* Adjusts step size and settling speed */
+    {AE_DAMPGAIN_I2CREG, 0x0200},             /* Adjusts step size and settling speed */
+    {AE_DAMPMAX_I2CREG, 0x0140},              /* Max value allowed for recursiveDamp */
+
+    {AE_CTRL_REG_I2CREG, 0x00},         /* AE Enable */
+
+    {0xFFFF, 0xFFFF} /* END MARKER */
+};
+
+int8_t i2c_scan(uint32_t base, uint8_t *foundaddr)
+{
+
+    int32_t present;
+
+    for(; addr < 127; addr++)
+    {
+        present = I2C_start(base, addr, 0);
+        I2C_write(base, 0x0, 1);
+
+        if (present == 0 && addr != 0x7c)
+        {
+            *foundaddr = addr;
+            addr++;
+            return 1;
+        }
+
+        usleep(1000);
+    }
+
+    if(addr > 126)
+    {
+        *foundaddr = 0;
+        return -1;
+    }
+
+
+    return 1;
+}
+
+int8_t read_reg(uint32_t base, uint8_t i2caddr, uint16_t reg, uint16_t* data)
+{
+    int8_t ret;
+
+    I2C_start(base, i2caddr, 0);
+    I2C_write(base, (reg >> 8) & 0xFF, 0);
+    I2C_write(base, (reg & 0xFF), 1);
+
+    I2C_start(base, i2caddr, 1);
+    *data = (I2C_read(base, 0) << 8);
+    *data |= (I2C_read(base, 1) & 0xFF);
+
+    return 1;
+
+}
+
+int8_t write_reg(uint32_t base, uint8_t i2caddr, uint16_t reg, uint16_t data)
+{
+    int8_t ret;
+
+    I2C_start(base, i2caddr, 0);
+    I2C_write(base, (reg >> 8) & 0xFF, 0);
+    I2C_write(base, (reg & 0xFF), 0);
+
+    //I2C_start(base, i2caddr, 0);
+    I2C_write(base, (data >> 8), 0);
+    I2C_write(base, (data & 0xFF), 1);
+
+    usleep(100);
+
+    return 1;
+
+}
+
+/*
+ * Write a list of register settings; ff/ff stops the process.
+ */
+int8_t mt9_write_array(uint32_t base, uint32_t addr, struct regval_list *vals)
+{
+
+    while (vals->reg_num != 0xFFFF || vals->value != 0xFFFF)
+    {
+        write_reg(base, addr, vals->reg_num, vals->value);
+        vals++;
+
+        usleep(100);
+    }
+
+    alt_printf("MT9: Init done!\n");
+
+    return 1;
+}
+
+void main()
+{
+    uint32_t i = 0;
+
+    alt_printf("EliMax CMOS App\n");
+
+    I2C_init(OPENCORES_I2C_0_BASE, ALT_CPU_FREQ, 100000);
+
+    if(i2c_scan(OPENCORES_I2C_0_BASE, &addr) > 0)
+    {
+        printf("Found: 0x%x\n", addr);
+    }
+
+    mt9_write_array(OPENCORES_I2C_0_BASE, addr, mt9_reset);
+
+    usleep(10000);
+
+    mt9_write_array(OPENCORES_I2C_0_BASE, addr, mt9_initvals);
+
+    printf("Flushing FIFO\n");
+    IOWR(VIDEOSAMPLER_0_BASE, 0x00, 0x00);
+
+    IOWR(LED_BASE, 0x00, 0x01);
+
+    /* Clear Edge capture */
+    IOWR(USBSTATUS_BASE, 0x03, 0x03);
+
+    printf("Wait for USB3 Firmware\n");
+
+    while((IORD(USBSTATUS_BASE, 0x00) & 0x01))
+    {
+        /* Wait for USB3 ready */
+        usleep(10000);
+    }
+
+    printf("USB3 Firmware OK\n");
+    printf("Starting image stream ...\n");
+
+    /*Configuration registre My_IP*/
+    uint16_t value;
+    scanf("%x", &value);
+    IOWR(IP_CUSTOM_0_BASE, 0x00, value); //Ecriture registre IP_Custom
+
+
+    while(1)
+    {
+        /* Wait for USB3 ready */
+        while((IORD(USBSTATUS_BASE, 0x03) & 0x02) == 0);
+        IOWR(USBSTATUS_BASE, 0x03, 0x02);
+
+        i++;
+        IOWR(VIDEOSAMPLER_0_BASE, 0x00, 0x00);
+
+        IOWR(CLEAR_BASE, 0x00, 0x01);
+        //usleep(100);
+        IOWR(CLEAR_BASE, 0x00, 0x00);
+        //usleep(100);
+
+        IOWR(VIDEOSAMPLER_0_BASE, 0x05, BULKSIZE);
+        IOWR(VIDEOSAMPLER_0_BASE, 0x00, 0x01);
+
+        IOWR(LED_BASE, 0x00, i&0x01);
+
+        IOWR(USBSTATUS_BASE, 0x03, 0x02);
+    }
+}

@@ -1,0 +1,53 @@
+[*]
+[*] GTKWave Analyzer v3.3.79 (w)1999-2017 BSI
+[*] Thu Dec 27 16:27:25 2018
+[*]
+[dumpfile] "/tmp/tb_videosampler.vcd"
+[dumpfile_mtime] "Thu Dec 27 16:26:52 2018"
+[dumpfile_size] 18670182
+[savefile] "/home/luca/repo/elios/fpga/intel/lib/CameraOneFrame/videosampler/testbench/tb_videosampler.gtkw"
+[timestart] 0
+[size] 1600 836
+[pos] -1 -1
+*-24.000000 1541000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_videosampler.
+[sst_width] 229
+[signals_width] 246
+[sst_expanded] 1
+[sst_vpaned_height] 221
+@28
+tb_videosampler.clk_proc
+tb_videosampler.addr_rel_i[2:0]
+@24
+tb_videosampler.data[7:0]
+@28
+tb_videosampler.pclk
+tb_videosampler.start
+tb_videosampler.vsync
+tb_videosampler.href
+@22
+tb_videosampler.datawr_i[31:0]
+@28
+tb_videosampler.reset_n
+tb_videosampler.wr_i
+@24
+#{tb_videosampler.videosampler_inst.out_data[7:0]} tb_videosampler.videosampler_inst.out_data[7] tb_videosampler.videosampler_inst.out_data[6] tb_videosampler.videosampler_inst.out_data[5] tb_videosampler.videosampler_inst.out_data[4] tb_videosampler.videosampler_inst.out_data[3] tb_videosampler.videosampler_inst.out_data[2] tb_videosampler.videosampler_inst.out_data[1] tb_videosampler.videosampler_inst.out_data[0]
+@28
+tb_videosampler.videosampler_inst.out_dv
+tb_videosampler.videosampler_inst.out_sop
+tb_videosampler.videosampler_inst.out_eop
+tb_videosampler.videosampler_inst.rdreq
+tb_videosampler.videosampler_inst.rdreq_d
+tb_videosampler.videosampler_inst.stream_st[1:0]
+@24
+tb_videosampler.videosampler_inst.video_st[2:0]
+@25
+tb_videosampler.videosampler_inst.vsync_period[31:0]
+@24
+tb_videosampler.videosampler_inst.pclkonhref_count[31:0]
+tb_videosampler.videosampler_inst.href_count[31:0]
+tb_videosampler.videosampler_inst.pclkonhref_count_pclk[31:0]
+tb_videosampler.videosampler_inst.dvcount[31:0]
+tb_videosampler.videosampler_inst.href_count_pclk[31:0]
+[pattern_trace] 1
+[pattern_trace] 0

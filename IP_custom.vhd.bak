@@ -1,0 +1,59 @@
+library ieee;
+library work;
+use ieee.std_logic_1164.all;
+
+entity IP_custom is
+    port (
+	 
+	 CLOCK_25    :  in std_logic;
+
+    RESET_N     :  in std_logic;
+    
+	 in_data    :  in std_logic_vector(7 downto 0);
+	 in_dv		:	in std_logic;
+	 in_sop		:	in std_logic;
+	 in_eop		:	in std_logic;
+	 
+	 
+	 out_data   :  out std_logic_vector(7 downto 0);
+	 out_dv		:	out std_logic;
+	 out_sop		:	out std_logic;
+	 out_eop		:	out std_logic);
+end entity; 
+
+
+	 
+	 signal data_pixel   : std_logic_vector(7 downto 0);
+signal data_valid   : std_logic;
+signal eop          : std_logic;
+signal sop          : std_logic;
+
+signal clear_fifo   : std_logic;
+signal leds         : std_logic_vector(1 downto 0);
+signal usbstatus : std_logic_vector (3 downto 0);
+
+
+
+
+architecture dataflow of IP_custom is
+
+begin
+
+	process (CLOCK_25, RESET_N) is
+	begin
+
+
+		if(RESET_N = '0') then 
+			out_data   	<= "0000000";
+			out_dv		<= '0';
+			out_sop		<= '0';
+			out_eop		<= '0';
+		elsif(CLOCK_25'event and CLOCK_25 = '1') then 
+			out_data   	<= in_data;
+			out_dv		<= in_dv;
+			out_sop		<= in_sop;
+			out_eop		<= in_eop;
+		end if;
+	end process;
+
+end architecture;

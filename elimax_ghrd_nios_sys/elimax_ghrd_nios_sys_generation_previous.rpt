@@ -1,0 +1,132 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\mondoye\Desktop\elimax_uca\elimax_ghrd_nios_sys.qsys --synthesis=VHDL --output-directory=C:\Users\mondoye\Desktop\elimax_uca\elimax_ghrd_nios_sys\synthesis --family="MAX 10" --part=10M50DAF256C8G
+Progress: Loading elimax_uca/elimax_ghrd_nios_sys.qsys
+Progress: Reading input file
+Progress: Adding IP_custom_0 [IP_custom 1.0]
+Progress: Parameterizing module IP_custom_0
+Progress: Adding altpll_0 [altpll 18.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding clear [altera_avalon_pio 18.1]
+Progress: Parameterizing module clear
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding clock_bridge_0 [altera_clock_bridge 18.1]
+Progress: Parameterizing module clock_bridge_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding led [altera_avalon_pio 18.1]
+Progress: Parameterizing module led
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding opencores_i2c_0 [opencores_i2c 9.1]
+Progress: Parameterizing module opencores_i2c_0
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 18.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Adding trigger [altera_avalon_pio 18.1]
+Progress: Parameterizing module trigger
+Progress: Adding usb_streaming_0 [usb_streaming 1.0]
+Progress: Parameterizing module usb_streaming_0
+Progress: Adding usbstatus [altera_avalon_pio 18.1]
+Progress: Parameterizing module usbstatus
+Progress: Adding videosampler_0 [videosampler 4.0]
+Progress: Parameterizing module videosampler_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: elimax_ghrd_nios_sys.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: elimax_ghrd_nios_sys.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: elimax_ghrd_nios_sys.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: elimax_ghrd_nios_sys.usbstatus: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: elimax_ghrd_nios_sys: Generating elimax_ghrd_nios_sys "elimax_ghrd_nios_sys" for QUARTUS_SYNTH
+Info: Inserting clock-crossing logic between cmd_demux.src6 and cmd_mux_006.sink0
+Info: Inserting clock-crossing logic between rsp_demux_006.src0 and rsp_mux.sink6
+Info: IP_custom_0: "elimax_ghrd_nios_sys" instantiated IP_custom "IP_custom_0"
+Info: altpll_0: "elimax_ghrd_nios_sys" instantiated altpll "altpll_0"
+Info: clear: Starting RTL generation for module 'elimax_ghrd_nios_sys_clear'
+Info: clear:   Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=elimax_ghrd_nios_sys_clear --dir=C:/Users/mondoye/AppData/Local/Temp/alt8304_8272050934530262163.dir/0044_clear_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/mondoye/AppData/Local/Temp/alt8304_8272050934530262163.dir/0044_clear_gen//elimax_ghrd_nios_sys_clear_component_configuration.pl  --do_build_sim=0  ]
+Info: clear: Done RTL generation for module 'elimax_ghrd_nios_sys_clear'
+Info: clear: "elimax_ghrd_nios_sys" instantiated altera_avalon_pio "clear"
+Info: jtag_uart_0: Starting RTL generation for module 'elimax_ghrd_nios_sys_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=elimax_ghrd_nios_sys_jtag_uart_0 --dir=C:/Users/mondoye/AppData/Local/Temp/alt8304_8272050934530262163.dir/0045_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/mondoye/AppData/Local/Temp/alt8304_8272050934530262163.dir/0045_jtag_uart_0_gen//elimax_ghrd_nios_sys_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'elimax_ghrd_nios_sys_jtag_uart_0'
+Info: jtag_uart_0: "elimax_ghrd_nios_sys" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: led: Starting RTL generation for module 'elimax_ghrd_nios_sys_led'
+Info: led:   Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=elimax_ghrd_nios_sys_led --dir=C:/Users/mondoye/AppData/Local/Temp/alt8304_8272050934530262163.dir/0046_led_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/mondoye/AppData/Local/Temp/alt8304_8272050934530262163.dir/0046_led_gen//elimax_ghrd_nios_sys_led_component_configuration.pl  --do_build_sim=0  ]
+Info: led: Done RTL generation for module 'elimax_ghrd_nios_sys_led'
+Info: led: "elimax_ghrd_nios_sys" instantiated altera_avalon_pio "led"
+Info: nios2_gen2_0: "elimax_ghrd_nios_sys" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'elimax_ghrd_nios_sys_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=elimax_ghrd_nios_sys_onchip_memory2_0 --dir=C:/Users/mondoye/AppData/Local/Temp/alt8304_8272050934530262163.dir/0047_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/mondoye/AppData/Local/Temp/alt8304_8272050934530262163.dir/0047_onchip_memory2_0_gen//elimax_ghrd_nios_sys_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'elimax_ghrd_nios_sys_onchip_memory2_0'
+Info: onchip_memory2_0: "elimax_ghrd_nios_sys" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: opencores_i2c_0: "elimax_ghrd_nios_sys" instantiated opencores_i2c "opencores_i2c_0"
+Info: sysid_qsys_0: "elimax_ghrd_nios_sys" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info: trigger: Starting RTL generation for module 'elimax_ghrd_nios_sys_trigger'
+Info: trigger:   Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=elimax_ghrd_nios_sys_trigger --dir=C:/Users/mondoye/AppData/Local/Temp/alt8304_8272050934530262163.dir/0050_trigger_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/mondoye/AppData/Local/Temp/alt8304_8272050934530262163.dir/0050_trigger_gen//elimax_ghrd_nios_sys_trigger_component_configuration.pl  --do_build_sim=0  ]
+Info: trigger: Done RTL generation for module 'elimax_ghrd_nios_sys_trigger'
+Info: trigger: "elimax_ghrd_nios_sys" instantiated altera_avalon_pio "trigger"
+Info: usb_streaming_0: "elimax_ghrd_nios_sys" instantiated usb_streaming "usb_streaming_0"
+Info: usbstatus: Starting RTL generation for module 'elimax_ghrd_nios_sys_usbstatus'
+Info: usbstatus:   Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=elimax_ghrd_nios_sys_usbstatus --dir=C:/Users/mondoye/AppData/Local/Temp/alt8304_8272050934530262163.dir/0052_usbstatus_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/mondoye/AppData/Local/Temp/alt8304_8272050934530262163.dir/0052_usbstatus_gen//elimax_ghrd_nios_sys_usbstatus_component_configuration.pl  --do_build_sim=0  ]
+Info: usbstatus: Done RTL generation for module 'elimax_ghrd_nios_sys_usbstatus'
+Info: usbstatus: "elimax_ghrd_nios_sys" instantiated altera_avalon_pio "usbstatus"
+Info: videosampler_0: "elimax_ghrd_nios_sys" instantiated videosampler "videosampler_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "elimax_ghrd_nios_sys" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "elimax_ghrd_nios_sys" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "elimax_ghrd_nios_sys" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'elimax_ghrd_nios_sys_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA/18.1/quartus/bin64//perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=elimax_ghrd_nios_sys_nios2_gen2_0_cpu --dir=C:/Users/mondoye/AppData/Local/Temp/alt8304_8272050934530262163.dir/0056_cpu_gen/ --quartus_bindir=C:/intelFPGA/18.1/quartus/bin64/ --verilog --config=C:/Users/mondoye/AppData/Local/Temp/alt8304_8272050934530262163.dir/0056_cpu_gen//elimax_ghrd_nios_sys_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2020.02.12 15:39:45 (*) Starting Nios II generation
+Info: cpu: # 2020.02.12 15:39:45 (*)   Checking for plaintext license.
+Info: cpu: # 2020.02.12 15:39:45 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA/18.1/quartus/bin64/
+Info: cpu: # 2020.02.12 15:39:45 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2020.02.12 15:39:45 (*)   Plaintext license not found.
+Info: cpu: # 2020.02.12 15:39:45 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2020.02.12 15:39:45 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2020.02.12 15:39:45 (*)   Creating all objects for CPU
+Info: cpu: # 2020.02.12 15:39:46 (*)   Generating RTL from CPU objects
+Info: cpu: # 2020.02.12 15:39:46 (*)   Creating plain-text RTL
+Info: cpu: # 2020.02.12 15:39:47 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'elimax_ghrd_nios_sys_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_007: "mm_interconnect_0" instantiated altera_merlin_router "router_007"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_005: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_005"
+Info: Reusing file C:/Users/mondoye/Desktop/elimax_uca/elimax_ghrd_nios_sys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_006: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_006"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/Users/mondoye/Desktop/elimax_uca/elimax_ghrd_nios_sys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file C:/Users/mondoye/Desktop/elimax_uca/elimax_ghrd_nios_sys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: elimax_ghrd_nios_sys: Done "elimax_ghrd_nios_sys" with 38 modules, 65 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

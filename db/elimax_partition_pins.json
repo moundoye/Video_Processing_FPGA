@@ -1,0 +1,213 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "USR_LEDS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "USR_LEDS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TRIGGER",
+					"strict" : false
+				},
+				{
+					"name" : "RESET_BAR",
+					"strict" : false
+				},
+				{
+					"name" : "EZ_RSTN",
+					"strict" : false
+				},
+				{
+					"name" : "CTL0",
+					"strict" : false
+				},
+				{
+					"name" : "CTL1",
+					"strict" : false
+				},
+				{
+					"name" : "CTL2",
+					"strict" : false
+				},
+				{
+					"name" : "CTL3",
+					"strict" : false
+				},
+				{
+					"name" : "CTL7",
+					"strict" : false
+				},
+				{
+					"name" : "CTL11",
+					"strict" : false
+				},
+				{
+					"name" : "CTL12",
+					"strict" : false
+				},
+				{
+					"name" : "CMOS_SDA",
+					"strict" : false
+				},
+				{
+					"name" : "CMOS_SCL",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DQ[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RESET_N",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_25",
+					"strict" : false
+				},
+				{
+					"name" : "CTL5",
+					"strict" : false
+				},
+				{
+					"name" : "CTL4_SW",
+					"strict" : false
+				},
+				{
+					"name" : "CTL6",
+					"strict" : false
+				},
+				{
+					"name" : "PIXCLK",
+					"strict" : false
+				},
+				{
+					"name" : "CTL9",
+					"strict" : false
+				},
+				{
+					"name" : "LINE_VALID",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "FRAME_VALID",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

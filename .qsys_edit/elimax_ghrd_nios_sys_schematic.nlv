@@ -1,0 +1,57 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst elimax_ghrd_nios_sys.clock_bridge_0 -pg 1 -lvl 4 -y 270
+preplace inst elimax_ghrd_nios_sys.opencores_i2c_0 -pg 1 -lvl 3 -y 770
+preplace inst elimax_ghrd_nios_sys.sysid_qsys_0 -pg 1 -lvl 3 -y 1150
+preplace inst elimax_ghrd_nios_sys.nios2_gen2_0 -pg 1 -lvl 2 -y 540
+preplace inst elimax_ghrd_nios_sys.usb_streaming_0 -pg 1 -lvl 4 -y 390
+preplace inst elimax_ghrd_nios_sys.onchip_memory2_0 -pg 1 -lvl 3 -y 1070
+preplace inst elimax_ghrd_nios_sys.led -pg 1 -lvl 4 -y 50
+preplace inst elimax_ghrd_nios_sys.clk_0 -pg 1 -lvl 1 -y 430
+preplace inst elimax_ghrd_nios_sys.nios2_gen2_0.clock_bridge -pg 1
+preplace inst elimax_ghrd_nios_sys.usbstatus -pg 1 -lvl 4 -y 150
+preplace inst elimax_ghrd_nios_sys.clear -pg 1 -lvl 3 -y 330
+preplace inst elimax_ghrd_nios_sys.altpll_0 -pg 1 -lvl 3 -y 210
+preplace inst elimax_ghrd_nios_sys.videosampler_0 -pg 1 -lvl 3 -y 1230
+preplace inst elimax_ghrd_nios_sys.trigger -pg 1 -lvl 3 -y 970
+preplace inst elimax_ghrd_nios_sys.nios2_gen2_0.cpu -pg 1
+preplace inst elimax_ghrd_nios_sys.nios2_gen2_0.reset_bridge -pg 1
+preplace inst elimax_ghrd_nios_sys.jtag_uart_0 -pg 1 -lvl 3 -y 670
+preplace inst elimax_ghrd_nios_sys -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.usb_streaming_0_ctl6,(SLAVE)usb_streaming_0.ctl6) 1 0 4 NJ 600 NJ 440 NJ 640 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.usb_streaming_0_ctl1,(SLAVE)usb_streaming_0.ctl1) 1 0 4 NJ 500 NJ 340 NJ 540 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)videosampler_0.pclk_i,(SLAVE)elimax_ghrd_nios_sys.videosampler_0_pclk_i) 1 0 3 NJ 1300 NJ 1300 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(MASTER)videosampler_0.avalon_streaming_source,(MASTER)elimax_ghrd_nios_sys.videosampler_0_avalon_streaming_source) 1 3 2 NJ 1300 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)trigger.external_connection,(SLAVE)elimax_ghrd_nios_sys.trigger_external_connection) 1 0 3 NJ 1000 NJ 1000 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(MASTER)clock_bridge_0.out_clk,(MASTER)elimax_ghrd_nios_sys.clock_bridge_0_out_clk) 1 4 1 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.clear_external_connection,(SLAVE)clear.external_connection) 1 0 3 NJ 260 NJ 260 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)videosampler_0.pixel_i,(SLAVE)elimax_ghrd_nios_sys.videosampler_0_pixel_i) 1 0 3 NJ 1320 NJ 1320 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.usb_streaming_0_ctl4_sw,(SLAVE)usb_streaming_0.ctl4_sw) 1 0 4 NJ 560 NJ 400 NJ 600 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)led.external_connection,(SLAVE)elimax_ghrd_nios_sys.led_external_connection) 1 0 4 NJ 80 NJ 80 NJ 80 NJ
+preplace netloc POINT_TO_POINT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)altpll_0.inclk_interface,(MASTER)clk_0.clk) 1 1 2 400 220 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.videosampler_0_vsync_i,(SLAVE)videosampler_0.vsync_i) 1 0 3 NJ 1360 NJ 1360 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.usb_streaming_0_ctl5,(SLAVE)usb_streaming_0.ctl5) 1 0 4 NJ 580 NJ 420 NJ 620 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)altpll_0.areset_conduit,(SLAVE)elimax_ghrd_nios_sys.altpll_0_areset_conduit) 1 0 3 NJ 200 NJ 200 NJ
+preplace netloc FAN_OUT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)usbstatus.reset,(SLAVE)videosampler_0.reset_sink,(SLAVE)opencores_i2c_0.clock_reset,(SLAVE)trigger.reset,(MASTER)clk_0.clk_reset,(SLAVE)usb_streaming_0.reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)sysid_qsys_0.reset,(SLAVE)clear.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)altpll_0.inclk_interface_reset,(SLAVE)led.reset) 1 1 3 500 500 1080 460 1590
+preplace netloc FAN_OUT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)clear.clk,(SLAVE)led.clk,(SLAVE)usb_streaming_0.clock,(SLAVE)sysid_qsys_0.clk,(SLAVE)usbstatus.clk,(SLAVE)clock_bridge_0.in_clk,(SLAVE)onchip_memory2_0.clk1,(MASTER)altpll_0.c1,(SLAVE)nios2_gen2_0.clk,(SLAVE)opencores_i2c_0.clock,(SLAVE)jtag_uart_0.clk,(SLAVE)trigger.clk,(SLAVE)videosampler_0.clock_sink) 1 1 3 580 480 1100 440 1570
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.usb_streaming_0_ctl2,(SLAVE)usb_streaming_0.ctl2) 1 0 4 NJ 520 NJ 360 NJ 560 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)usb_streaming_0.ctl12,(SLAVE)elimax_ghrd_nios_sys.usb_streaming_0_ctl12) 1 0 4 NJ 900 NJ 900 NJ 940 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.usbstatus_external_connection,(SLAVE)usbstatus.external_connection) 1 0 4 NJ 180 NJ 180 NJ 180 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)usb_streaming_0.ctl11,(SLAVE)elimax_ghrd_nios_sys.usb_streaming_0_ctl11) 1 0 4 NJ 880 NJ 880 NJ 920 NJ
+preplace netloc FAN_OUT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)jtag_uart_0.irq,(SLAVE)opencores_i2c_0.interrupt_sender,(MASTER)nios2_gen2_0.irq) 1 2 1 1020
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.usb_streaming_0_usb_data,(SLAVE)usb_streaming_0.usb_data) 1 0 4 NJ 920 NJ 920 NJ 960 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.usb_streaming_0_ctl3,(SLAVE)usb_streaming_0.ctl3) 1 0 4 NJ 540 NJ 380 NJ 580 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)altpll_0.locked_conduit,(SLAVE)elimax_ghrd_nios_sys.altpll_0_locked_conduit) 1 0 3 NJ 240 NJ 240 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.usb_streaming_0_ctl8,(SLAVE)usb_streaming_0.ctl8) 1 0 4 NJ 860 NJ 860 NJ 900 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)usb_streaming_0.ctl0,(SLAVE)elimax_ghrd_nios_sys.usb_streaming_0_ctl0) 1 0 4 NJ 320 NJ 320 NJ 520 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(MASTER)elimax_ghrd_nios_sys.altpll_0_c0,(MASTER)altpll_0.c0) 1 3 2 NJ 40 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)videosampler_0.href,(SLAVE)elimax_ghrd_nios_sys.videosampler_0_href) 1 0 3 NJ 1280 NJ 1280 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.usb_streaming_0_ctl7,(SLAVE)usb_streaming_0.ctl7) 1 0 4 NJ 620 NJ 460 NJ 660 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.usb_streaming_0_clear_fifo,(SLAVE)usb_streaming_0.clear_fifo) 1 0 4 NJ 300 NJ 300 NJ 500 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)usb_streaming_0.asi_in0,(SLAVE)elimax_ghrd_nios_sys.usb_streaming_0_asi_in0) 1 0 4 NJ 280 NJ 280 NJ 480 NJ
+preplace netloc EXPORT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)elimax_ghrd_nios_sys.opencores_i2c_0_export_0,(SLAVE)opencores_i2c_0.export_0) 1 0 3 NJ 640 NJ 840 NJ
+preplace netloc INTERCONNECT<net_container>elimax_ghrd_nios_sys</net_container>(SLAVE)led.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)sysid_qsys_0.control_slave,(SLAVE)altpll_0.pll_slave,(SLAVE)opencores_i2c_0.avalon_slave_0,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)trigger.s1,(SLAVE)usbstatus.s1,(SLAVE)clear.s1,(SLAVE)videosampler_0.avalon_slave_0,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)onchip_memory2_0.s1) 1 1 3 580 680 1220 200 1550
+levelinfo -pg 1 0 190 2240
+levelinfo -hier elimax_ghrd_nios_sys 200 230 700 1310 1870 2020

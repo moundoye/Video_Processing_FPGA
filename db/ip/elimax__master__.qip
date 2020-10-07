@@ -1,0 +1,1 @@
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) elimax_ghrd_nios_sys/elimax_ghrd_nios_sys.qip]

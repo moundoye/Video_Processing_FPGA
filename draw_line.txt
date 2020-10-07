@@ -1,0 +1,85 @@
+library ieee;
+library work;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity IP_custom is
+    port (
+	 
+	 CLOCK    :  in std_logic;
+
+    RESET_N     :  in std_logic;
+    
+	 in_data    :  in std_logic_vector(7 downto 0);
+	 in_dv		:	in std_logic;
+	 in_sop		:	in std_logic;
+	 in_eop		:	in std_logic;
+	 
+	 
+	 out_data   :  out std_logic_vector(7 downto 0);
+	 out_dv		:	out std_logic;
+	 out_sop		:	out std_logic;
+	 out_eop		:	out std_logic);
+end entity; 
+
+architecture dataflow of IP_custom is
+
+type state_type is (pending, start_count);
+signal state : state_type; 
+
+signal count_col : integer range 0 to 1280;
+signal count_raw : integer range 0 to 960;
+
+
+begin 
+	
+	process (CLOCK, RESET_N) is
+	begin
+
+		if(RESET_N = '0') then 
+
+			state <= pending;
+			
+			count_col <= 0;
+			count_raw <= 0;
+			
+			out_data <= (others => '0');
+			
+			out_dv		<= '0';
+			out_sop		<= '0';
+			out_eop		<= '0';
+			
+		elsif(CLOCK'event and CLOCK = '1') then 
+		
+			if (in_dv = '1') then 
+			
+				count_col <= count_col + 1;
+				
+				if (count_col = 1279) then
+					count_raw <= count_raw + 1;
+					count_col <= 0;
+				end if;
+				
+				if (count_raw = 960) then
+					count_raw <= 0;
+				end if;
+				
+				if (count_col = 319 or count_raw = 239 or count_col = 639 or count_raw = 479 or count_col = 959 or count_raw = 719) then
+					out_data <= "00000000";
+				else
+					out_data <= in_data;
+				end if;
+				
+			end if;
+			
+				out_dv		<= in_dv;
+				out_sop		<= in_sop;
+				out_eop		<= in_eop;
+		end if;
+		
+	end process;
+	
+	
+
+end architecture;

@@ -1,0 +1,41 @@
+# vsim -c -L /home/luca/altera/15.1/modelsim_ase/altera/verilog/altera_mf/ -L /home/luca/altera/15.1/modelsim_ase/altera/verilog/220model/ -do "run 200us;quit" tb_stream 
+# Start time: 17:50:55 on Dec 27,2018
+# Loading work.tb_stream
+# Loading work.videosampler
+# Loading /home/luca/altera/15.1/modelsim_ase/altera/verilog/altera_mf/.dcfifo
+# Loading /home/luca/altera/15.1/modelsim_ase/altera/verilog/altera_mf/.dcfifo_mixed_widths
+# Loading /home/luca/altera/15.1/modelsim_ase/altera/verilog/altera_mf/.ALTERA_DEVICE_FAMILIES
+# Loading /home/luca/altera/15.1/modelsim_ase/altera/verilog/altera_mf/.dcfifo_low_latency
+# Loading /home/luca/altera/15.1/modelsim_ase/altera/verilog/altera_mf/.ALTERA_MF_HINT_EVALUATION
+# Loading /home/luca/altera/15.1/modelsim_ase/altera/verilog/altera_mf/.dcfifo_dffpipe
+# Loading work.streamstore
+# Loading /home/luca/altera/15.1/modelsim_ase/altera/verilog/altera_mf/.scfifo
+# Loading /home/luca/altera/15.1/modelsim_ase/altera/verilog/altera_mf/.dcfifo_async
+# Loading /home/luca/altera/15.1/modelsim_ase/altera/verilog/altera_mf/.dcfifo_fefifo
+# ** Warning: (vsim-3017) ../../streamstore/hdl/streamstore.v(253): [TFMPC] - Too few port connections. Expected 13, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_stream/streamstore_inst/scfifo_component File: /build/swbuild/SJ/nightly/15.1/185/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-3722) ../../streamstore/hdl/streamstore.v(253): [TFMPC] - Missing connection for port 'eccstatus'.
+# ** Warning: (vsim-3722) ../../streamstore/hdl/streamstore.v(253): [TFMPC] - Missing connection for port 'usedw'.
+# ** Warning: (vsim-3722) ../../streamstore/hdl/streamstore.v(253): [TFMPC] - Missing connection for port 'almost_full'.
+# ** Warning: (vsim-3722) ../../streamstore/hdl/streamstore.v(253): [TFMPC] - Missing connection for port 'almost_empty'.
+# run 200us
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# IMAGE STREAM GENERATOR
+# VSYNC delay          23
+# HSYNC delay         100
+# Image size         320 X          10
+# IMAGE STREAM GENERATOR
+# VSYNC delay          23
+# HSYNC delay         100
+# Image size         320 X          10
+# IMAGE STREAM GENERATOR
+# VSYNC delay          23
+# HSYNC delay         100
+# Image size         320 X          10
+# IMAGE STREAM GENERATOR
+# VSYNC delay          23
+# HSYNC delay         100
+# Image size         320 X          10
+# quit
+# End time: 17:50:58 on Dec 27,2018, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 6

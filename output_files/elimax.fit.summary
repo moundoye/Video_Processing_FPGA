@@ -1,0 +1,18 @@
+Fitter Status : Successful - Wed Feb 12 15:53:56 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : elimax
+Top-level Entity Name : elimax
+Family : MAX 10
+Device : 10M50DAF256C8G
+Timing Models : Final
+Total logic elements : 2,938 / 49,760 ( 6 % )
+    Total combinational functions : 2,653 / 49,760 ( 5 % )
+    Dedicated logic registers : 1,765 / 49,760 ( 4 % )
+Total registers : 1765
+Total pins : 59 / 178 ( 33 % )
+Total virtual pins : 0
+Total memory bits : 1,113,088 / 1,677,312 ( 66 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

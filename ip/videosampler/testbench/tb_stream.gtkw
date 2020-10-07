@@ -1,0 +1,49 @@
+[*]
+[*] GTKWave Analyzer v3.3.79 (w)1999-2017 BSI
+[*] Thu Dec 27 16:51:50 2018
+[*]
+[dumpfile] "/tmp/tb_stream.vcd"
+[dumpfile_mtime] "Thu Dec 27 16:50:58 2018"
+[dumpfile_size] 20296474
+[savefile] "/home/luca/repo/elios/fpga/intel/lib/CameraOneFrame/videosampler/testbench/tb_stream.gtkw"
+[timestart] 5365000
+[size] 1600 836
+[pos] -1 -1
+*-14.000000 5409000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_stream.
+[sst_width] 229
+[signals_width] 246
+[sst_expanded] 1
+[sst_vpaned_height] 221
+@28
+tb_stream.start
+tb_stream.videosampler_inst.vsync_i
+tb_stream.videosampler_inst.href_i
+tb_stream.videosampler_inst.out_dv
+tb_stream.videosampler_inst.out_sop
+tb_stream.videosampler_inst.out_eop
+@22
+#{tb_stream.videosampler_inst.out_data[7:0]} tb_stream.videosampler_inst.out_data[7] tb_stream.videosampler_inst.out_data[6] tb_stream.videosampler_inst.out_data[5] tb_stream.videosampler_inst.out_data[4] tb_stream.videosampler_inst.out_data[3] tb_stream.videosampler_inst.out_data[2] tb_stream.videosampler_inst.out_data[1] tb_stream.videosampler_inst.out_data[0]
+@28
+tb_stream.videosampler_inst.wr_i
+@24
+tb_stream.datawr_i[31:0]
+@22
+tb_stream.streamstore_inst.control_write_base[31:0]
+@24
+tb_stream.streamstore_inst.control_write_length[31:0]
+@28
+tb_stream.streamstore_inst.done_int_flag
+tb_stream.streamstore_inst.control_go
+tb_stream.streamstore_inst.control_done
+@23
+tb_stream.streamstore_inst.scr[31:0]
+@24
+tb_stream.streamstore_inst.length[31:0]
+@22
+tb_stream.streamstore_inst.address[31:0]
+#{tb_stream.streamstore_inst.master_writedata[7:0]} tb_stream.streamstore_inst.master_writedata[7] tb_stream.streamstore_inst.master_writedata[6] tb_stream.streamstore_inst.master_writedata[5] tb_stream.streamstore_inst.master_writedata[4] tb_stream.streamstore_inst.master_writedata[3] tb_stream.streamstore_inst.master_writedata[2] tb_stream.streamstore_inst.master_writedata[1] tb_stream.streamstore_inst.master_writedata[0]
+@24
+tb_stream.streamstore_inst.master_write
+[pattern_trace] 1
+[pattern_trace] 0

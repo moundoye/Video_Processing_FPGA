@@ -1,0 +1,34 @@
+	component elimax_ghrd_nios_sys is
+		port (
+			altpll_0_areset_conduit_export       : in    std_logic                     := 'X';             -- export
+			altpll_0_c0_clk                      : out   std_logic;                                        -- clk
+			altpll_0_locked_conduit_export       : out   std_logic;                                        -- export
+			clear_external_connection_export     : out   std_logic;                                        -- export
+			clk_clk                              : in    std_logic                     := 'X';             -- clk
+			clock_bridge_0_out_clk_clk           : out   std_logic;                                        -- clk
+			led_external_connection_export       : out   std_logic_vector(1 downto 0);                     -- export
+			opencores_i2c_0_export_0_scl_pad_io  : inout std_logic                     := 'X';             -- scl_pad_io
+			opencores_i2c_0_export_0_sda_pad_io  : inout std_logic                     := 'X';             -- sda_pad_io
+			reset_reset_n                        : in    std_logic                     := 'X';             -- reset_n
+			trigger_external_connection_export   : out   std_logic;                                        -- export
+			usb_streaming_0_clear_fifo_conduit   : in    std_logic                     := 'X';             -- conduit
+			usb_streaming_0_ctl0_conduit         : out   std_logic;                                        -- conduit
+			usb_streaming_0_ctl1_conduit         : out   std_logic;                                        -- conduit
+			usb_streaming_0_ctl11_conduit        : out   std_logic;                                        -- conduit
+			usb_streaming_0_ctl12_conduit        : out   std_logic;                                        -- conduit
+			usb_streaming_0_ctl2_conduit         : out   std_logic;                                        -- conduit
+			usb_streaming_0_ctl3_conduit         : out   std_logic;                                        -- conduit
+			usb_streaming_0_ctl4_sw_conduit      : in    std_logic                     := 'X';             -- conduit
+			usb_streaming_0_ctl5_conduit         : in    std_logic                     := 'X';             -- conduit
+			usb_streaming_0_ctl6_conduit         : in    std_logic                     := 'X';             -- conduit
+			usb_streaming_0_ctl7_conduit         : out   std_logic;                                        -- conduit
+			usb_streaming_0_ctl8_conduit         : in    std_logic                     := 'X';             -- conduit
+			usb_streaming_0_usb_data_conduit     : inout std_logic_vector(15 downto 0) := (others => 'X'); -- conduit
+			usbstatus_external_connection_export : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- export
+			videosampler_0_href_conduit          : in    std_logic                     := 'X';             -- conduit
+			videosampler_0_pclk_i_conduit        : in    std_logic                     := 'X';             -- conduit
+			videosampler_0_pixel_i_conduit       : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- conduit
+			videosampler_0_vsync_i_conduit       : in    std_logic                     := 'X'              -- conduit
+		);
+	end component elimax_ghrd_nios_sys;
+

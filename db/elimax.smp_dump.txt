@@ -1,0 +1,41 @@
+
+State Machine - |elimax|elimax_ghrd_nios_sys:elimax_ghrd_nios_sys_inst|videosampler:videosampler_0|stream_st
+Name stream_st.WAIT_LAST stream_st.FLOW stream_st.WAIT_FIRST stream_st.START 
+stream_st.START 0 0 0 0 
+stream_st.WAIT_FIRST 0 0 1 1 
+stream_st.FLOW 0 1 0 1 
+stream_st.WAIT_LAST 1 0 0 1 
+
+State Machine - |elimax|elimax_ghrd_nios_sys:elimax_ghrd_nios_sys_inst|videosampler:videosampler_0|video_st
+Name video_st.WAIT_TRIGGER video_st.FLOW_PCLK video_st.WAIT_FIRST_PCLK video_st.START_PCLK 
+video_st.START_PCLK 0 0 0 0 
+video_st.WAIT_FIRST_PCLK 0 0 1 1 
+video_st.FLOW_PCLK 0 1 0 1 
+video_st.WAIT_TRIGGER 1 0 0 1 
+
+State Machine - |elimax|elimax_ghrd_nios_sys:elimax_ghrd_nios_sys_inst|usb_streaming:usb_streaming_0|ez_interface:ez_interface_inst|ctrl_state
+Name ctrl_state.EZ_CTRL_STATE_READ_END ctrl_state.EZ_CTRL_STATE_READ ctrl_state.EZ_CTRL_STATE_READ_START ctrl_state.EZ_CTRL_STATE_POSTDELAY ctrl_state.EZ_CTRL_STATE_WRITE ctrl_state.EZ_CTRL_STATE_IDLE 
+ctrl_state.EZ_CTRL_STATE_IDLE 0 0 0 0 0 0 
+ctrl_state.EZ_CTRL_STATE_WRITE 0 0 0 0 1 1 
+ctrl_state.EZ_CTRL_STATE_POSTDELAY 0 0 0 1 0 1 
+ctrl_state.EZ_CTRL_STATE_READ_START 0 0 1 0 0 1 
+ctrl_state.EZ_CTRL_STATE_READ 0 1 0 0 0 1 
+ctrl_state.EZ_CTRL_STATE_READ_END 1 0 0 0 0 1 
+
+State Machine - |elimax|elimax_ghrd_nios_sys:elimax_ghrd_nios_sys_inst|opencores_i2c:opencores_i2c_0|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|c_state
+Name c_state.ST_IDLE c_state.ST_STOP c_state.ST_ACK c_state.ST_WRITE c_state.ST_READ c_state.ST_START 
+c_state.ST_IDLE 0 0 0 0 0 0 
+c_state.ST_START 1 0 0 0 0 1 
+c_state.ST_READ 1 0 0 0 1 0 
+c_state.ST_WRITE 1 0 0 1 0 0 
+c_state.ST_ACK 1 0 1 0 0 0 
+c_state.ST_STOP 1 1 0 0 0 0 
+
+State Machine - |elimax|elimax_ghrd_nios_sys:elimax_ghrd_nios_sys_inst|elimax_ghrd_nios_sys_nios2_gen2_0:nios2_gen2_0|elimax_ghrd_nios_sys_nios2_gen2_0_cpu:cpu|elimax_ghrd_nios_sys_nios2_gen2_0_cpu_nios2_oci:the_elimax_ghrd_nios_sys_nios2_gen2_0_cpu_nios2_oci|elimax_ghrd_nios_sys_nios2_gen2_0_cpu_debug_slave_wrapper:the_elimax_ghrd_nios_sys_nios2_gen2_0_cpu_debug_slave_wrapper|elimax_ghrd_nios_sys_nios2_gen2_0_cpu_debug_slave_tck:the_elimax_ghrd_nios_sys_nios2_gen2_0_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

@@ -1,0 +1,16 @@
+	process (CLOCK_25, RESET_N) is
+	begin
+
+
+		if(RESET_N = '0') then 
+			out_data   	<= "00000000";
+			out_dv		<= '0';
+			out_sop		<= '0';
+			out_eop		<= '0';
+		elsif(CLOCK_25'event and CLOCK_25 = '1') then 
+			out_data   	<= in_data;
+			out_dv		<= in_dv;
+			out_sop		<= in_sop;
+			out_eop		<= in_eop;
+		end if;
+	end process;

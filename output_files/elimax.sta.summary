@@ -1,0 +1,257 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 0.763
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_25'
+Slack : 36.172
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'altera_reserved_tck'
+Slack : 44.919
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'PIXCLK'
+Slack : 93.093
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 0.290
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'PIXCLK'
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_25'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 4.031
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'CLOCK_25'
+Slack : 37.667
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 47.631
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'PIXCLK'
+Slack : 97.295
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'CLOCK_25'
+Slack : 0.790
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 1.020
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'altera_reserved_tck'
+Slack : 1.239
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'PIXCLK'
+Slack : 1.996
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 4.681
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PCLK'
+Slack : 5.556
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_25'
+Slack : 19.767
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PIXCLK'
+Slack : 49.602
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.677
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 1.196
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_25'
+Slack : 36.351
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 45.081
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'PIXCLK'
+Slack : 93.326
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 0.264
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'PIXCLK'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_25'
+Slack : 0.317
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.317
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 4.443
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'CLOCK_25'
+Slack : 37.808
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 47.739
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'PIXCLK'
+Slack : 97.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'CLOCK_25'
+Slack : 0.685
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 0.938
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 1.113
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'PIXCLK'
+Slack : 1.786
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 4.659
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PCLK'
+Slack : 5.556
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_25'
+Slack : 19.746
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PIXCLK'
+Slack : 49.618
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.697
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 6.288
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_25'
+Slack : 38.485
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 48.327
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'PIXCLK'
+Slack : 97.312
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 0.094
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'PIXCLK'
+Slack : 0.116
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_25'
+Slack : 0.150
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 7.217
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CLOCK_25'
+Slack : 38.994
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 49.251
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'PIXCLK'
+Slack : 98.819
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CLOCK_25'
+Slack : 0.326
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 0.419
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'PIXCLK'
+Slack : 0.840
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'elimax_ghrd_nios_sys_inst|altpll_0|sd1|pll7|clk[1]'
+Slack : 4.710
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PCLK'
+Slack : 6.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_25'
+Slack : 19.438
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PIXCLK'
+Slack : 49.408
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.426
+TNS   : 0.000
+
+------------------------------------------------------------

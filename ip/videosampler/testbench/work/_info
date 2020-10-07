@@ -1,0 +1,86 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/luca/repo/elios/fpga/intel/lib/CameraOneFrame/videosampler/testbench
+vstreamstore
+Z1 !s110 1545929455
+!i10b 1
+!s100 Y4Yh;4lQnG7z?UeLX6MM80
+I8<B9hf1XzHZ^XQ]X_b5Hz3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1545929418
+8../../streamstore/hdl/streamstore.v
+F../../streamstore/hdl/streamstore.v
+L0 67
+Z3 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z4 !s108 1545929455.000000
+Z5 !s107 ../../streamstore/hdl/streamstore.v|../hdl/videosampler.v|tb_stream.v|
+Z6 !s90 tb_stream.v|../hdl/videosampler.v|../../streamstore/hdl/streamstore.v|
+!i113 1
+vtb_stream
+R1
+!i10b 1
+!s100 ngb?4lmB=k[7:gfzfSKle2
+IVhc7R<X>ePEC@^IG0Le3X3
+R2
+R0
+w1545929453
+Z7 8tb_stream.v
+Z8 Ftb_stream.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+vtb_videosampler
+!s110 1545928174
+!i10b 1
+!s100 SXee:l50lh2><_=>j67J90
+IIzC?AT:8:@c`8fhVLdV3O1
+R2
+R0
+w1545928061
+R7
+R8
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1545928174.000000
+R5
+R6
+!i113 1
+vvideosampler
+R1
+!i10b 1
+!s100 3kQji>P>`5PEgnd8l][lo1
+I;[2Mb2LBTd^2DVMVEKiWJ1
+R2
+R0
+w1545927351
+8../hdl/videosampler.v
+F../hdl/videosampler.v
+L0 61
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
